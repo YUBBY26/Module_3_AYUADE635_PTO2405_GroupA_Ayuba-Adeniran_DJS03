@@ -1,4 +1,7 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
+import { BookPreview } from './bookPreview.js'
+
+customElements.define('book-preview', BookPreview);
 
 
 const Book = {
@@ -13,7 +16,7 @@ const Book = {
      */
 
 createElement: (book) => {
-    const element = document.createElement('button')
+    const element = document.createElement('button');
     element.classList = 'preview'
     element.setAttribute('data-preview', book.id)
 
